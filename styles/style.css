@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: "IBM Plex mono", monospace;
+  font-family: var(--main-font-family);
   font-size: 18px;
   background-color: var(--main-bg-color);
   background-image: var(--main-bg-image);
@@ -16,7 +16,8 @@
   display: grid;
   align-items: start;
   padding: clamp(10px, 0.03rem + 2.5vw, 20px);
-  min-block-size: 100vh;
+  height: 100vh;
+  min-height: 668px;
 }
 
 /* Заголовок страницы */
@@ -233,7 +234,8 @@ h4.article__title {
   display: grid;
   place-items: center;
   padding: clamp(10px, 0.03rem + 2.5vw, 20px);
-  min-block-size: 100vh;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .footer__title {

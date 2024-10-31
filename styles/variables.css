@@ -26,6 +26,7 @@
   --secondary-color-hover: var(--color-purple-translucent,rgb(255 0 112 / 0.4));
   --main-bg-color: var(--color-black-dark, #000028);
   --main-bg-image: url(../images/cover-image-dark.png);
+  --main-font-family: "IBM Plex mono", monospace;
 
   /* Отображение надписи REC */
   --rec-visibility: visible;
