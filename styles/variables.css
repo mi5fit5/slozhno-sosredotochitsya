@@ -2,3 +2,32 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  /* Переменные для названия цветов */
+  --color-black-dark: #000028;
+  --color-black-gray: #353430;
+  --color-black-translucent: rgb(50 49 45 / 0.4);
+
+  --color-pink-light: #fff1f7;
+  --color-pink-lavender: #f1b2ce;
+  --color-pink-candy: #ffc2e6;
+  --color-pink-shiny: #ff8dcb;
+
+  --color-purple-magenta: #db00ff;
+  --color-purple-scarlet: #ff0070;
+  --color-purple-translucent: rgb(255 0 112 / 0.4);
+
+  /* Основные переменные */
+  --text-color: var(--color-pink-lavender, #f1b2ce);
+  --primary-color: var(--color-purple-magenta, #db00ff);
+  --accent-color: var(--color-purple-scarlet, #ff0070);
+  --highlight-color: var(--color-black-dark, #000028);
+  --secondary-color: var(--color-purple-scarlet, #ff0070);
+  --secondary-color-hover: var(--color-purple-translucent, rgb(255 0 112 / 0.4));
+
+  --main-bg-color: var(--color-black-dark, #000028);
+  --main-bg-image: url(../images/cover-image-dark.png);
+
+  /* Отображение надписи REC */
+  --rec-visibility: visible; 
+}

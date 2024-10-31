@@ -9,4 +9,31 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --text-color: var(--color-black-gray, #353430);
+  --primary-color: var(--color-pink-candy, #ffc2e6);
+  --accent-color: var(--color-pink-shiny, #ff8dcb);
+  --highlight-color: var(--color-black-gray, #353430);
+  --secondary-color: var(--color-black-gray, #353430);
+  --secondary-color-hover: var(--color-black-translucent, rgb(50 49 45 / 0.4));
+
+  --main-bg-color: var(--color-pink-light, #fff1f7);
+  --main-bg-image: url(../images/cover-image-light.png);
+
+  --rec-visibility: hidden; 
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--color-black-gray, #353430);
+    --primary-color: var(--color-pink-candy, #ffc2e6);
+    --accent-color: var(--color-pink-shiny, #ff8dcb);
+    --highlight-color: var(--color-black-gray, #353430);
+    --secondary-color: var(--color-black-gray, #353430);
+    --secondary-color-hover: var(--color-black-translucent, rgb(50 49 45 / 0.4));
+
+    --main-bg-color: var(--color-pink-light, #fff1f7);
+    --main-bg-image: url(../images/cover-image-light.png);
+
+    --rec-visibility: hidden; 
+  }
 }
