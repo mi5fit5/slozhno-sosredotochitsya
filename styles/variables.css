@@ -23,14 +23,23 @@
   --accent-color: var(--color-purple-scarlet, #ff0070);
   --highlight-color: var(--color-black-dark, #000028);
   --secondary-color: var(--color-purple-scarlet, #ff0070);
+<<<<<<< HEAD
   --secondary-color-hover: var(
     --color-purple-translucent,
     rgb(255 0 112 / 0.4)
   );
+=======
+  --secondary-color-hover: var(--color-purple-translucent, rgb(255 0 112 / 0.4));
+>>>>>>> 0663df7d75bb70b87f719ddeb58f79f14dc176ff
 
   --main-bg-color: var(--color-black-dark, #000028);
   --main-bg-image: url(../images/cover-image-dark.png);
 
   /* Отображение надписи REC */
+<<<<<<< HEAD
   --rec-visibility: visible;
 }
+=======
+  --rec-visibility: visible; 
+}
+>>>>>>> 0663df7d75bb70b87f719ddeb58f79f14dc176ff

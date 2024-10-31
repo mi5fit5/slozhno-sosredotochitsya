@@ -14,14 +14,19 @@
   --accent-color: var(--color-purple-scarlet, #ff0070);
   --highlight-color: var(--color-black-dark, #000028);
   --secondary-color: var(--color-purple-scarlet, #ff0070);
+<<<<<<< HEAD
   --secondary-color-hover: var(
     --color-purple-translucent,
     rgb(255 0 112 / 0.4)
   );
+=======
+  --secondary-color-hover: var(--color-purple-translucent, rgb(255 0 112 / 0.4));
+>>>>>>> 0663df7d75bb70b87f719ddeb58f79f14dc176ff
 
   --main-bg-color: var(--color-black-dark, #000028);
   --main-bg-image: url(../images/cover-image-dark.png);
 
+<<<<<<< HEAD
   --rec-visibility: visible;
 }
 
@@ -41,5 +46,24 @@
     --main-bg-image: url(../images/cover-image-dark.png);
 
     --rec-visibility: visible;
+  }
+=======
+  --rec-visibility: visible; 
+>>>>>>> 0663df7d75bb70b87f719ddeb58f79f14dc176ff
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--color-pink-lavender, #f1b2ce);
+    --primary-color: var(--color-purple-magenta, #db00ff);
+    --accent-color: var(--color-purple-scarlet, #ff0070);
+    --highlight-color: var(--color-black-dark, #000028);
+    --secondary-color: var(--color-purple-scarlet, #ff0070);
+    --secondary-color-hover: var(--color-purple-translucent, rgb(255 0 112 / 0.4));
+
+    --main-bg-color: var(--color-black-dark, #000028);
+    --main-bg-image: url(../images/cover-image-dark.png);
+
+    --rec-visibility: visible; 
   }
 }
