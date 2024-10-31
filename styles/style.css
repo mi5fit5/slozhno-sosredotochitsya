@@ -2,4 +2,333 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex mono", monospace;
+  font-size: 18px;
+  background-color: var(--main-bg-color);
+  background-image: var(--main-bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Шапка */
+.header {
+  display: grid;
+  align-items: start;
+  padding: clamp(10px, 0.03rem + 2.5vw, 20px);
+  min-block-size: 100vh;
+}
+
+/* Заголовок страницы */
+.page-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 5.981rem;
+  text-transform: lowercase;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+/* Кнопки */
+.header__theme-menu {
+  justify-self: end;
+  margin-block: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11.5px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.header__theme-menu-button_active {
+  border-color: currentColor;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--secondary-color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
+/* Подпись после заголовка */
+.header__hero {
+  margin-block: 55px;
+  color: var(--highlight-color);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+}
+
+/* Значок записи (надпись + кружок) */
+.rec {
+  position: absolute;
+  z-index: -1;
+  visibility: var(--rec-visibility);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  inset-block-start: 10px;
+  inset-inline-end: 20px;
+}
+
+.rec::before {
+  content: "REC";
+  color: var(--accent-color);
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.rec::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+/* Края объектива для шапки и футера */
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before, .decorated-zone::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-inline-end: 1px solid var(--secondary-color);
+  border-block-start: 1px solid var(--secondary-color);
+  inset-inline-end: clamp(10px, 0.03rem + 2.5vw, 20px);
+  inset-block-start: clamp(10px, 0.03rem + 2.5vw, 20px);
+}
+
+.decorated-zone::after {
+  border-inline-start: 1px solid var(--secondary-color);
+  border-block-end: 1px solid var(--secondary-color);
+  inset-inline-start: clamp(10px, 0.03rem + 2.5vw, 20px);
+  inset-block-end: clamp(10px, 0.03rem + 2.5vw, 20px);
+}
+
+/* Основной контент */
+.main-content {
+  display: grid;
+  gap: 50px;
+  padding: 40px 10px;
+}
+
+/* Секции */
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section__title, .article__title {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 23.4px;
+}
+
+h4.article__title {
+  font-weight: 400;
+}
+
+.title-decor {
+  color: var(--highlight-color);
+  background-color: var(--accent-color);
+}
+
+.section-how__title {
+  margin-block-end: 20px;
+}
+
+.article-list {
+  display: grid;
+  gap: 20px;
+}
+
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+.article__text {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 23.4px;
+}
+
+/* Ссылки в тексте */
+.article__link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.article__link:hover {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.article__link:focus {
+  outline: 0;
+}
+
+.article__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.article__link-shadow {
+  text-shadow: 3px 3px 0 var(--accent-color);
+}
+
+/* Галерея */
+.section-gallery {
+  gap: 10px;
+}
+
+.gallery-list {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* Футер */
+.footer {
+  display: grid;
+  place-items: center;
+  padding: clamp(10px, 0.03rem + 2.5vw, 20px);
+  min-block-size: 100vh;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* Стили для размеров экрана >= 768px */
+@media (width >= 768px) {
+  .header {
+    padding-inline-start: 0;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 170px;
+    margin-block-end: 70px;
+  }
+
+  .header__hero {
+    justify-self: end;
+    inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
+  }
+
+  .rec {
+    inset-inline-end: 29.5px;
+    inset-block-start: 20px;
+  }
+
+  .page-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 6.188rem;
+  }
+
+  .main-content {
+    gap: 80px;
+    padding: 60px 20px;
+  }
+
+  .section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 314px) 1fr;
+  }
+
+  .section-what__article-list {
+    grid-column-start: span 2;
+  }
+
+  .section-how__article-list {
+    grid-column-start: 2;
+  }
+
+  .section-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-list__item:first-child, .gallery-list__item:last-child {
+    grid-column-start: span 2;
+  }
+
+  .gallery-list__item:nth-child(2), .gallery-list__item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+}
+
+/* Стили для размеров экрана >= 1024px */
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .page-title {
+    line-height: 8.096rem;
+    text-shadow: 4px 4px 0 #ff0070;
+  }
+
+  .section {
+    column-gap: 30px;
+  }
+
+  .section-what__article-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0 #ff0070;
+  }
 }
